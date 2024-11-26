@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Saver</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+    }
+    .folder-entry {
+      margin-bottom: 10px;
+    }
+    .folder-entry input, select {
+      margin-right: 5px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Manage Folders</h2>
+  <div id="folders"></div>
+  <button id="add-folder">Add Folder</button>
+  <button id="save-settings">Save Settings</button>
+  <input type="text" id="videoId" placeholder="Enter YouTube Video ID" />
+  <button id="getUrl">Get Video URL</button>
+  <p id="output"></p>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Dynamic Image Saver",
+    "version": "1.0",
+    "description": "Save images to custom folders with dynamic settings.",
+    "permissions": ["contextMenus", "downloads", "storage", "scripting", "devtools", "webRequest", "webRequestBlocking"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "scripts": ["dist/background.bundle.js"],
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+      "48": "icons/icon.png"
+      }
+    },
+    "icons": {
+      "48": "icons/icon.png"
+    },
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "addon@example.com",
+        "strict_min_version": "58.0"
+      }
+    }
+
+  }
+  
